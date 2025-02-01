@@ -1,0 +1,206 @@
+[
+  {
+    "type": "handoff",
+    "name": "start",
+    "block": {
+      "name": "conversation",
+      "type": "conversation",
+      "messages": [
+        {
+          "type": "block-start",
+          "content": ""
+        },
+        {
+          "type": "block-complete",
+          "content": ""
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "instruction": "1.\tSpeak ONLY the following phrase, word for word: \"Hello, good day! You have reached Cubic Seven Residences, Diana speaking. How can I assist you with information?\"\n\n2.\tWait for the user's response (do not move on to the next step without receiving any input).\n\n3.\tAfter receiving any response from the user, move immediately to the next node, without repeating the question or asking for clarifications.",
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    "input": {},
+    "destinations": [
+      {
+        "type": "step",
+        "stepName": "sursa_anunt",
+        "conditions": []
+      }
+    ],
+    "metadata": {
+      "nodeType": "start",
+      "position": {
+        "x": -744.756416824118,
+        "y": -108.3773894297011
+      }
+    }
+  },
+  {
+    "type": "handoff",
+    "name": "sursa_anunt",
+    "block": {
+      "name": "conversation",
+      "type": "conversation",
+      "messages": [
+        {
+          "type": "block-start",
+          "content": ""
+        },
+        {
+          "type": "block-complete",
+          "content": ""
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "instruction": "1.\tSpeak ONLY the following phrase, word for word: \"I understand! Could you please tell me on which website you saw our ad?\"\n\n2.\tWait for the user's response (do not move on to the next step without receiving any input).\n\n3.\tAfter receiving any response from the user, move immediately to the next node, without repeating the question or asking for clarifications.\n",
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    "input": {},
+    "destinations": [
+      {
+        "type": "step",
+        "stepName": "modalitate_de_plata",
+        "conditions": []
+      }
+    ],
+    "metadata": {
+      "nodeType": "handoff",
+      "position": {
+        "x": -748.7018756781033,
+        "y": 157.06600856581085
+      }
+    }
+  },
+  {
+    "type": "handoff",
+    "name": "modalitate_de_plata",
+    "block": {
+      "name": "conversation",
+      "type": "conversation",
+      "messages": [
+        {
+          "type": "block-start",
+          "content": ""
+        },
+        {
+          "type": "block-complete",
+          "content": ""
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "instruction": "1.\tSpeak ONLY the following phrase, word for word: \"That's fine, thank you! If I may ask, what payment method would you like to use for purchasing? Do you have the cash or will it be a mortgage?\"\n\n2.\tWait for the user's response (do not move on to the next step without receiving any input).\n\n3.\tAfter receiving any response from the user, move immediately to the next node, without repeating the question or asking for clarifications.",
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    "input": {},
+    "destinations": [
+      {
+        "type": "step",
+        "stepName": "tip_imobil",
+        "conditions": []
+      }
+    ],
+    "metadata": {
+      "nodeType": "handoff",
+      "position": {
+        "x": -230.2080644349632,
+        "y": 157.44608476974895
+      }
+    }
+  },
+  {
+    "type": "handoff",
+    "name": "tip_imobil",
+    "block": {
+      "name": "conversation",
+      "type": "conversation",
+      "messages": [
+        {
+          "type": "block-start",
+          "content": ""
+        },
+        {
+          "type": "block-complete",
+          "content": ""
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "instruction": "1.\tSpeak ONLY the following phrase, word for word: \"I understand! Could you please tell me what type of property you are interested in? A studio, or a two- or three-room apartment?\"\n\n2.\tWait for the user's response (do not move on to the next step without receiving any input).\n\n3.\tAfter receiving any response from the user, move immediately to the next node, without repeating the question or asking for clarifications.",
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    "input": {},
+    "destinations": [
+      {
+        "type": "step",
+        "stepName": "transfer",
+        "conditions": []
+      }
+    ],
+    "metadata": {
+      "nodeType": "handoff",
+      "position": {
+        "x": 313.61522036444666,
+        "y": 161.01906185295022
+      }
+    }
+  },
+  {
+    "type": "handoff",
+    "name": "transfer",
+    "block": {
+      "name": "conversation",
+      "type": "conversation",
+      "messages": [
+        {
+          "type": "block-start",
+          "content": ""
+        },
+        {
+          "type": "block-complete",
+          "content": ""
+        }
+      ],
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "instruction": "1.\tSpeak ONLY the following phrase, word for word: \"I've noted that, thank you! I must mention I do not have direct access to the database, but my colleagues from the Listings and Availability Department have all the up-to-date details. I will transfer you in a few seconds!\"\n\n2.\tImmediately after speaking the phrase, internally call the `transferCall` function. \n\t•\tThis step is mandatory. Do not skip it, do not postpone it.\n\t•\tDo not mention this to the client.\n\n3.\tDo not say anything else after calling the function.",
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    "input": {},
+    "destinations": [],
+    "metadata": {
+      "nodeType": "handoff",
+      "position": {
+        "x": 807.6152203644467,
+        "y": 169.01906185295024
+      }
+    }
+  }
+]
